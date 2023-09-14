@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siska Putra Tri Gumilang</title>
+</head>
+<body>
+    <h1>Cetak Teks</h1>
+    <label for="inputText">Pesan : </label>
+    <input type="text" id="inputText" required>
+    <br>
+    <label for="countCetak">Berapa Kali : </label>
+    <input type="number" id="countCetak" min="1" required>
+    <br>
+    <button onclick="cetak()">Cetak!</button>
+    <h2>Hasil Cetak : </h2>
+    <ol id="list"></ol>
+
+    <script>
+        function cetak(){
+            const inputText = document.getElementById("inputText");
+            const countCetak = document.getElementById("countCetak");
+            const list = document.getElementById("list");
+
+            const textToPrint = inputText.value;
+            const count = parseInt(countCetak.value);
+
+            if (textToPrint && !isNaN(count) && count >= 1) {
+                list.innerHTML = ""; // Menghapus hasil cetakan sebelumnya
+        
+            for (let i = 1; i <= count; i++) {
+                const listItem = document.createElement("li");
+                listItem.textContent = textToPrint;
+                list.appendChild(listItem);
+                }
+            } else {
+                alert("Masukkan teks yang akan dicetak dan jumlah cetakan yang valid.");
+            }
+        }
+    </script>
+</body>
+</html>

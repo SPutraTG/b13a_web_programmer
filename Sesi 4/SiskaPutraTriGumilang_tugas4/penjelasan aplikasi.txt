@@ -1,0 +1,15 @@
+1. Judul : Penghitung Luas & Keliling Lingkaran
+
+2. Input yg diperlukan : 
+- <label for="radius">Masukkan jari-jari lingkaran:</label>
+  <input type="number" id="radius" name="radius" step="any">
+untuk menambahkan input jari jari lingkaran
+
+3. Pengguna dapat memasukkan terlebih dahulu jari-jari lingkaran. Ketika tombol "Hitung" ditekan, fungsi hitungLuasDanKeliling() akan dijalankan. Fungsi ini akan mengambil nilai jari-jari dari input form (let radius = parseFloat(document.getElementById("radius").value);) menghitung luas dengan variable luas yang diisi dengan rumus mencari luas lingkaran (let luas = Math.PI * Math.pow(radius, 2);) dan menghitung keliling dengan variable keliling yang diisi dengan rumus mencari keliling lingkaran (let keliling = 2 * Math.PI * radius;).
+
+4. Setelah dihitung dengan rumus yang telah disiapkan. Hasil akan ditampilkan di dalam elemen HTML dengan ID "luas" dan "keliling". Hasil akan ditampilkan dengan dua angka desimal menggunakan toFixed(2) untuk membatasi jumlah desimal. 
+document.getElementById("luas").textContent = luas.toFixed(2);
+document.getElementById("keliling").textContent = keliling.toFixed(2);
+<h2>Hasil:</h2>
+<p>Luas Lingkaran: <span id="luas"></span></p>
+<p>Keliling Lingkaran: <span id="keliling"></span></p>
